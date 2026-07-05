@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Smart Crop Advisory</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🌱 SmartCrop</div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#advisory">Advisory</a>
+      <a href="#features">Features</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu-btn" id="menuBtn">☰</button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <p class="tag">AI-BASED FARMING SUPPORT</p>
+        <h1>Smart Crop Advisory for Small and Marginal Farmers</h1>
+        <p>
+          Get crop recommendations, fertilizer suggestions, weather-based alerts,
+          and practical farming guidance for better yield.
+        </p>
+        <a href="#advisory" class="primary-btn">Get Crop Advice</a>
+      </div>
+
+      <div class="hero-card">
+        <div class="weather-icon">☀️</div>
+        <h3>Today's Farm Update</h3>
+        <p><strong>Temperature:</strong> 31°C</p>
+        <p><strong>Humidity:</strong> 68%</p>
+        <p><strong>Rain Chance:</strong> 25%</p>
+        <span class="status">Good day for irrigation planning</span>
+      </div>
+    </section>
+
+    <section class="advisory-section" id="advisory">
+      <div class="section-heading">
+        <p class="tag">PERSONALIZED RECOMMENDATION</p>
+        <h2>Get Your Crop Advisory</h2>
+        <p>Enter your farm details to receive a basic crop recommendation.</p>
+      </div>
+
+      <div class="advisory-container">
+        <form id="advisoryForm" class="advisory-form">
+          <div class="form-group">
+            <label for="soil">Soil Type</label>
+            <select id="soil" required>
+              <option value="">Select soil type</option>
+              <option value="black">Black Soil</option>
+              <option value="red">Red Soil</option>
+              <option value="clay">Clay Soil</option>
+              <option value="sandy">Sandy Soil</option>
+              <option value="loamy">Loamy Soil</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="season">Season</label>
+            <select id="season" required>
+              <option value="">Select season</option>
+              <option value="kharif">Kharif</option>
+              <option value="rabi">Rabi</option>
+              <option value="summer">Summer</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="water">Water Availability</label>
+            <select id="water" required>
+              <option value="">Select availability</option>
+              <option value="low">Low</option>
+              <option value="medium">Medium</option>
+              <option value="high">High</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="land">Land Area (Acres)</label>
+            <input type="number" id="land" min="0.1" step="0.1" placeholder="Example: 1.5" required />
+          </div>
+
+          <button type="submit" class="primary-btn full-btn">Generate Advisory</button>
+        </form>
+
+        <div class="result-card" id="resultCard">
+          <div class="result-placeholder">
+            <div class="result-icon">🌾</div>
+            <h3>Your advisory will appear here</h3>
+            <p>Fill in the farm details and click “Generate Advisory”.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="features" id="features">
+      <div class="section-heading">
+        <p class="tag">FARMER SUPPORT</p>
+        <h2>How SmartCrop Helps Farmers</h2>
+      </div>
+
+      <div class="feature-grid">
+        <article class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>Crop Recommendation</h3>
+          <p>Suggests suitable crops based on soil, season, land area, and water availability.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🌦️</div>
+          <h3>Weather Alerts</h3>
+          <p>Provides weather-related guidance for irrigation, sowing, and harvesting decisions.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">🧪</div>
+          <h3>Fertilizer Guidance</h3>
+          <p>Gives simple fertilizer recommendations to support healthy crop growth.</p>
+        </article>
+
+        <article class="feature-card">
+          <div class="feature-icon">📈</div>
+          <h3>Better Yield Planning</h3>
+          <p>Helps farmers plan resources efficiently and reduce avoidable crop losses.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="tips-section">
+      <div>
+        <p class="tag">FARMING TIP</p>
+        <h2>Check soil moisture before irrigation</h2>
+        <p>Over-irrigation can damage roots and waste water. Water crops based on soil moisture and crop stage.</p>
+      </div>
+      <div class="tip-icon">💧</div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div>
+      <h3>🌱 SmartCrop Advisory</h3>
+      <p>Supporting small and marginal farmers with smarter agricultural decisions.</p>
+    </div>
+    <p>© 2026 Smart Crop Advisory System</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
